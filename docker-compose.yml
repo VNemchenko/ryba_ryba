@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: myapp
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    user: "65534:65534"
